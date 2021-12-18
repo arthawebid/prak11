@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event jQuery</title>	
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+    <h1>onfocus event</h1>
+		<form>
+			<label for="onblur" class="label">Text Pemicu</label>
+				<input id="target" type="text" class="form-control" placeholder="textbox onblur">
+			<label for="non blur event" class="label"></label>
+				<input type="text" id="tfocus"  class="form-control" placeholder="textbox 2">
+	  	</form>
+
+		<div class="pesan">
+			<div class="alert alert-primary">
+				<span id="txpesan"></span>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "#target" ).focus(function() {
+			$("#txpesan").html("Kursor terdeteksi pada textbox ID: target");
+			$(".pesan").css("display", "inline").fadeOut( 2000 );
+	  	});
+		  $( "#tfocus" ).focus(function() {
+			$("#txpesan").html("Kursor terdeteksi pada textbox ID: tfocus");
+			$(".pesan").css("display", "inline").fadeOut( 2000 );
+	  	});
+	});
+</script>
+</html>

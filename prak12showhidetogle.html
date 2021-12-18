@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+        .jarak{padding-top: 10px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+        <h1>Menggeser Elemen Paragraf keatas dan kebawah </h1>
+        <input type="button" id="tampil" value="Show">
+        <input type="button" id="hilang" value="Hide">            
+        <input type="button" id="gantian" value="Toggle">
+        <div class="jarak"></div>
+        <div id="konten" class="card">
+            <div class="card-content"><p>Paragraf 1</p><p>Paragraf 2</p><p>Paragraf 3</p><p>Paragraf 4</p>
+            </div>
+        </div>
+        </center>
+    </div>
+
+</body>
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+       $("#tampil").click(function(){
+          $("#konten").show("3000");
+       });
+       $("#hilang").click(function(){
+           $("#konten").hide("1000");
+       });
+       $("#gantian").click(function(){
+           $("#konten").toggle("2500");
+       });
+    });
+</script>
+</html>

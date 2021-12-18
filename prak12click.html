@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event jQuery</title>	
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+    <h1>onClick event</h1>
+
+    <p id="TxKlik">Text Click</p>
+		
+	</div>
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "#TxKlik" ).click(function() {
+			alert( "Handler for .click() called." );
+	  	});
+	});
+</script>
+</html>

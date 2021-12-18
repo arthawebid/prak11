@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Efek Visual</title>
+<link rel="stylesheet" href="framework/bootstrap/css/bootstrap.min.css">
+<style type="text/css">
+#kotakx { 
+    width: 200px;height: 200px;background: orange;border: 1px solid black;position: relative; 
+}
+</style>
+    
+</head>
+<body>
+    <div class="container">
+    <div> Efek : 
+    <select id="efek">
+        <option value="blind">Blind</option><option value="clip">Clip</option>
+        <option value="drop">Drop</option><option value="explode">Explode</option>
+        <option value="fade">Fade</option><option value="fold">Fold</option>
+        <option value="puff">Puff</option><option value="slide">Slide</option>
+        <option value="scale">Scale</option>
+    </select>
+    <button id="show" class="btn btn-primary">Show</button>&nbsp;
+    <button id="hide" class="btn btn-primary">Hide</button>&nbsp;
+    <button id="toggle" class="btn btn-primary">Toggle</button>&nbsp;
+    <button id="slideup" class="btn btn-primary">Slide Up</button>&nbsp;
+    <button id="slidedown" class="btn btn-primary">Slide Down</button>
+    </div><br />
+    <div class="container">
+        <div id="kotakx"></div>
+    </div>
+    </div>
+</body>
+<script src="framework/jquery/js/jquery.min.js"></script>
+<script src="framework/jquery-ui-1.13.0.custom/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#hide").click(function () {
+            $("#kotakx").hide($("#efek").val(), 1000);
+        });
+        $("#show").click(function () {
+            $("#kotakx").show($("#efek").val(), 1000);
+        });
+        $("#toggle").click(function () {
+            $("#kotakx").toggle($("#efek").val(), 1000);
+        });
+        $("#slideup").click(function () {
+            $("#kotakx").slideUp("slow");
+        });
+        $("#slidedown").click(function () {
+            $("#kotakx").slideDown("slow");
+        });
+    });
+    </script>
+</html>

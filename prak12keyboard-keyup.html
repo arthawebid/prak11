@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>.Load demo</title>
+  <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <label for="test1">Test Keypress</label>
+    <input type="text" id="txTest1" class="form-control">
+  </div>
+  <div class="container">
+    <div id="psn"></div>
+  </div>
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script>
+  $("#txTest1").keyup(function() {
+  console.log( "Deteksi .keyup()" );
+});
+
+</script>
+</html>

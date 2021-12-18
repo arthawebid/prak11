@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar pengenalan jquery dasar</title>
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+    <h3>Event Ready</h3>
+    <div>
+        <div id="psnx" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <div id="psn"></div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    </div>
+    <div>
+        <div>Email:</div>
+        <div><input type="text" id="txEmail"></div>
+        <div>Alamat:</div>
+        <div><textarea id="txAlamat"></textarea>
+        <div><button id="cmdKirim">Kirim Form</button></div>
+    </div>
+    </div>
+	
+</body>
+
+<script src="framework/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+        $("#psnx").hide();
+		$("#cmdKirim").click(function(){
+            var txemail = $("#txEmail").val();
+            var txalamat = $("#txAlamat").val();
+            $("#psn").html("ISI:<br>txEmail: "+txemail+"<br>ALamat:"+txalamat+"<br>");
+            $("#psnx").show();
+        });
+	});
+</script>
+</html>

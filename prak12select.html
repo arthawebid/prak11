@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>select demo</title>
+  <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+  <style>
+  p {
+    color: blue;
+  }
+  div {
+    color: red;
+  }
+  </style>
+</head>
+<body>
+ 
+  <p>Click and drag the mouse to select text in the inputs.</p>
+  <input type="text" class="form-control" value="Some text">
+  <input type="text" class="form-control" value="to test on">
+  <div></div>
+ 
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script>
+$( ":input" ).select(function() {
+  $( "div" ).text( "Something was selected" ).show().fadeOut( 1000 );
+});
+</script>
+</html>

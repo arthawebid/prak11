@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event jQuery</title>	
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+    <h1>onblur event</h1>
+
+		<form>
+			<label for="onblur" class="label">Text Pemicu blur</label>
+				<input id="target" type="text" class="form-control" placeholder="textbox onblur">
+			<label for="non blur event" class="label">Text Pelengkap</label>
+				<input type="text"  class="form-control" placeholder="textbox 2">
+	  	</form>
+	</div>
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "#target" ).blur(function() {
+			alert( "Handler for .blur() called." );
+	  	});
+	});
+</script>
+</html>

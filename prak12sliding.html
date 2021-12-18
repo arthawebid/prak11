@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Jquery</title>
+</head>
+<body>
+    <center>
+    <h1>Menggeser Elemen Paragraf keatas dan kebawah </h1>
+    <form>
+        <input type="button" value="Geser Keatas" id="geserAtas">
+        <input type="button" value="Geser Kebawah" id="geserBawah">
+    </form>
+    <div>
+        <p id="pertama">Paragraf 1</p><p>Paragraf 2</p><p>Paragraf 3</p><p>Paragraf 4</p>
+    </div>
+    <p>Ini Paragraf 5</p>
+    </center>
+</body>
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#geserAtas").click(function(){
+                $("#pertama").slideUp("slow");
+            });
+            $("#geserBawah").click(function(){
+                $("#pertama").slideDown("slow");
+            });
+        });
+    </script>
+</html>

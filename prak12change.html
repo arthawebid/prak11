@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>focusin demo</title>
+  <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+  <style>
+  span {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>onfocus event</h1>
+    <label for="teksbox" class="label">Text Box</label>
+    <p><input type="text"> <span>Text telah diubah</span></p>
+    <label for="tekspassword" class="label">Text Password</label>
+    <p><input type="password"> <span>Text telah diubah</span></p>
+  </div>  
+ 
+</body>
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script>
+$( "p" ).change(function() {
+  $( this ).find( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+});
+</script>
+</html>

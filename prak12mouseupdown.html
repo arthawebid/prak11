@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>mousedown demo</title>
+  <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+ 
+<p>Press mouse and release here.</p>
+ 
+</body>
+
+<script type="text/javascript" src="framework/jquery/js/jquery.min.js"></script>
+<script>
+$( "p" )
+  .mouseup(function() {
+    $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
+  })
+  .mousedown(function() {
+    $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
+  });
+</script>
+</html>
